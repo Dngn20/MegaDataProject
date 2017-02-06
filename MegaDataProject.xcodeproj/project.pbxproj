@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C6DB55C1E4912D90080296F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DB55B1E4912D90080296F /* main.cpp */; };
+		9C6DB5661E4913690080296F /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DB5641E4913690080296F /* IntNode.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		9C6DB5581E4912D80080296F /* MegaDataProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaDataProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6DB55B1E4912D90080296F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9C6DB5641E4913690080296F /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Controller/IntNode.cpp; sourceTree = "<group>"; };
+		9C6DB5651E4913690080296F /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Controller/IntNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,27 @@
 		9C6DB55A1E4912D80080296F /* MegaDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				9C6DB5631E4913520080296F /* Controller */,
+				9C6DB5621E49134A0080296F /* Model */,
 				9C6DB55B1E4912D90080296F /* main.cpp */,
 			);
 			path = MegaDataProject;
+			sourceTree = "<group>";
+		};
+		9C6DB5621E49134A0080296F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C6DB5631E4913520080296F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C6DB5641E4913690080296F /* IntNode.cpp */,
+				9C6DB5651E4913690080296F /* IntNode.hpp */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6DB55C1E4912D90080296F /* main.cpp in Sources */,
+				9C6DB5661E4913690080296F /* IntNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +268,7 @@
 				9C6DB5611E4912D90080296F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
