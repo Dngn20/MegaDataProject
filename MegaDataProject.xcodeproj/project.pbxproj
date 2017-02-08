@@ -70,6 +70,8 @@
 		9C6DB5621E49134A0080296F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C6DB5651E4913690080296F /* IntNode.hpp */,
+				9C6DB5641E4913690080296F /* IntNode.cpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -77,8 +79,6 @@
 		9C6DB5631E4913520080296F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9C6DB5641E4913690080296F /* IntNode.cpp */,
-				9C6DB5651E4913690080296F /* IntNode.hpp */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
