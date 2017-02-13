@@ -12,10 +12,18 @@
 
 using namespace std;
 
-DataStructureController ::
-DataStructureController()
+DataStructureController :: DataStructureController()
 {
-    
+    wordNode = Node<string>("");
+    numberNode= Node<int>();
+}
+
+void DataStructureController:: testNodes()
+{
+    cout << "The Contents of the node<string>" << endl;
+    cout << wordNode.getNodePointer() << endl;
+    cout << "Here is the Node<int>" << endl;
+    cout << numberNode.getNodePointer() << endl;
 }
 
 void DataStructureController :: start()
