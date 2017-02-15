@@ -8,7 +8,7 @@
 
 #ifndef Node_hpp
 #define Node_hpp
-#include "IntNode.cpp"
+
 
 template <class Type>
 class Node
