@@ -128,4 +128,32 @@ Array<Type> :: Array()
         cout<< "Fornt is at: " << front << " count is: " << count << endl;
      }
 }
+
+template <class type>
+Array<Type> :: Array(const Array<Type> & toBeCopied)
+{
+    this->size = toBeCopied.getSize();
+    
+    //Build Data Structure
+    this->front = new Node<Type>();
+    for(int index = 1; index < size; index++)
+    {
+        Node<Type> * copyTemp = toBeCopied.getFront();
+        Node<Type> * updated = this->front;
+        front = temp;
+    }
+    //Copy values into new Array
+    for(int index = 0; index < size; index++)
+    {
+        updated->setNodeData(copyTemp->getNodeData());
+        updated = updated = getNodePointer();
+        compyTemp = copyTemp->getnodePointer();
+    }
+}
+
+template <class Type>
+Node<Type> * Array<Type> :: getFront() const
+{
+    return front;
+}
 #endif /* Array_hpp */
