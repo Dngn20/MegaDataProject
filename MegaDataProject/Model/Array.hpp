@@ -24,6 +24,16 @@ public:
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
     int getSize();
+    //Destructor
+    ~Array<Type>();
+    //Copy Constructor
+    Array<Type>(const Array<Type> & toBeCopied);
+    //Helper Method
+    int getSize() const;
+    Node<Type> * getFront() const;
+    
+    void setAtIndex(int index, Type value);
+    Type getFromIndex(int index);
 };
 
 /*
@@ -90,5 +100,32 @@ template <class type>
 int Array<Type> :: getSize()
 {
     return size;
+}
+
+template <class Type>
+int Array<Type> :: getSize() const
+{
+    return size;
+}
+
+template <class Type>
+Array<Type> :: Array()
+{
+    int count = size;
+    Node<Type> * remoce = front;
+    while(front != nullptr)
+    {
+        //Move to next node in array
+        front = front-> getNodePointer();
+        cout << "Moving to the next node. At: " << count << endl;
+        //Delte the front pointer
+        delete remove;
+        cout << "Delting the old front pointer. " end;;
+        remove = frontl
+        //Move delete to the new front.
+        cout << "Moving to new front pointer." << endl;
+        count--;
+        cout<< "Fornt is at: " << front << " count is: " << count << endl;
+     }
 }
 #endif /* Array_hpp */
