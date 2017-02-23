@@ -11,12 +11,15 @@
 
 #include "Node.hpp"
 #include <assert.h>
+#include <iostream>
+
+using namespace std;
 
 template  <class Type>
 class Array
 {
 private:
-    int size
+    int size;
     Node<Type> * front;
 public:
     Array();
@@ -31,9 +34,6 @@ public:
     //Helper Method
     int getSize() const;
     Node<Type> * getFront() const;
-    
-    void setAtIndex(int index, Type value);
-    Type getFromIndex(int index);
 };
 
 /*
@@ -50,14 +50,14 @@ Array<Type> :: Array()
 template <class Type>
 Array<Type> :: Array(int size)
 {
-    assert(size > size);
+    assert(size > 0);
     
     this-> size = size;
-    this->Front = new Node<Type>();
+    this->front = new Node<Type>();
     
     for (int index = 1; index < size; index++)
     {
-        Node<Type>() * current = new Node<Type>();
+        Node<Type> * current = new Node<Type>();
         current-> setNodePointer(front);
         front = current;
     }
@@ -75,17 +75,17 @@ void Array<Type> :: setAtIndex(int index, Type data)
     {
         current = current->getNodePointer();
     }
-    current->setNodedata(value);
+    current-> setNodeData(value);
 }
 
-template <class type>
+template <class Type>
 Type Array<Type> :: getFromIndex(int index)
 {
-    assert(index > 0 && index < size);
+    assert(index >= 0 && index < size);
     
     Type value;
     
-    Node<Type> * current = frontl
+    Node<Type> * current = front;
     for(int position = 0; position < index; position++)
     {
         current = current->getNodePointer();
@@ -93,10 +93,10 @@ Type Array<Type> :: getFromIndex(int index)
     
     value = current->getNodeData();
     
-    return value
+    return value;
 }
 
-template <class type>
+template <class Type>
 int Array<Type> :: getSize()
 {
     return size;
@@ -109,10 +109,10 @@ int Array<Type> :: getSize() const
 }
 
 template <class Type>
-Array<Type> :: Array()
+Array<Type> :: ~Array()
 {
     int count = size;
-    Node<Type> * remoce = front;
+    Node<Type> * remove = front;
     while(front != nullptr)
     {
         //Move to next node in array
@@ -120,8 +120,8 @@ Array<Type> :: Array()
         cout << "Moving to the next node. At: " << count << endl;
         //Delte the front pointer
         delete remove;
-        cout << "Delting the old front pointer. " end;;
-        remove = frontl
+        cout << "Delting the old front pointer. " << endl;
+        remove = front;
         //Move delete to the new front.
         cout << "Moving to new front pointer." << endl;
         count--;
@@ -129,7 +129,7 @@ Array<Type> :: Array()
      }
 }
 
-template <class type>
+template < class Type>
 Array<Type> :: Array(const Array<Type> & toBeCopied)
 {
     this->size = toBeCopied.getSize();
@@ -138,16 +138,20 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     this->front = new Node<Type>();
     for(int index = 1; index < size; index++)
     {
-        Node<Type> * copyTemp = toBeCopied.getFront();
-        Node<Type> * updated = this->front;
+        Node<Type> * temp = new Node<Type>();
+        temp->setNodePointer(front);
         front = temp;
     }
-    //Copy values into new Array
+    //Copy values into new Array.
+    //This could be done at the same time as the build step
+    //but this is easier to explain.
+    Node<Type> * copyTemp = toBeCopied.getFront();
+    Node<Type> * updated = this->front;
     for(int index = 0; index < size; index++)
     {
         updated->setNodeData(copyTemp->getNodeData());
-        updated = updated = getNodePointer();
-        compyTemp = copyTemp->getnodePointer();
+        updated = updated->getNodePointer();
+        copyTemp = copyTemp->getNodePointer();
     }
 }
 

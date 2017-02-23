@@ -65,8 +65,11 @@ Node<Type> * Node<Type> :: getNodePointer()
     return this->nodePointer;
 }
 
-
-
+template <class Type>
+void Node<Type> :: setNodeData(Type newValue)
+{
+    nodeData = newValue;
+}
 
 
 
