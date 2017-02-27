@@ -31,7 +31,7 @@ void DataStructureController :: start()
     cout << "Starting the project" << endl;
     cout << "Switching to the aray testing" << endl;
     cout << "Finished testing" << endl;
-    testAdvancedFeatures();
+    testList();
 }
 
 void DataStructureController :: testIntArray()
@@ -58,7 +58,6 @@ void DataStructureController :: testIntArray()
     }
     
 }
-
 void DataStructureController :: testAdvancedFeatures()
 {
     int showDestructor = 0;
@@ -75,3 +74,19 @@ void DataStructureController :: testAdvancedFeatures()
         
     }
 }
+void DataStructureController :: testList()
+{
+    List<string> sample;
+    sample.addFront("and");
+    sample.addEnd("bye");
+    sample.addFront("HI");
+    cout << "This should go 1, 2, 3" << endl;
+    
+    for(int index = 0; index < sample.getSize(); index++)
+    {
+        cout << sample.getFromIndex(index) << endl;
+    }
+    
+    cout << "Size should read 3 and is " << sample.getSize() << endl;
+}
+

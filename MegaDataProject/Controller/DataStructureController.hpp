@@ -12,6 +12,7 @@
 #include "../Model/Node.hpp"
 #include <string>
 #include "../Model/Array.hpp"
+#include "../Model/List.hpp"
 using namespace std;
 
 class DataStructureController
@@ -22,6 +23,7 @@ private:
     Node<string> wordNode;
     void testNodes();
     void testAdvancedFeatures();
+    void testList();
     
     
 public:

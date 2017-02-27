@@ -14,33 +14,37 @@ class List
 {
 private:
     int size;
-    Node<Type> * front
+    Node<Type> * front;
+    Node<Type> * end;
 public:
     List();
     List(List<Type> & source);
     ~List<Type>();
     
     void addAtIndex(int index, Type value);
-    void add(Type value);
+    void addFront(Type value);
+    void addEnd(Type value);
     Type remove(int index);
-    Type setAtIndex(int index)
-    bool contains(Type data)
+    Type getFromIndex(int index);
+    Type setAtIndex(int index, Type value);
+    bool contains(Type data);
     int getSize() const;
     Node<Type> * getFront() const;
+    Node<Type> * getEnd() const;
 };
 
 template <class Type>
 List<Type> :: List()
 {
-    this-> = 0;
+    this-> size = 0;
     this->front = nullptr;
     this->end = nullptr;
 }
 template <class Type>
 List<Type> :: ~List()
 {
-    Node<Type> * destruction = frontl
-    while(front ! nullptr)
+    Node<Type> * destruction = front;
+    while(front != nullptr)
     {
         front =front->getNodePointer();
         delete destruction;
@@ -56,7 +60,7 @@ int List<Type> :: getSize() const
 template <class Type>
 Node<Type> * List<Type> :: getFront() const
 {
-    return this->front
+    return this->front;
 }
 
 template <class Type>
@@ -83,26 +87,26 @@ void List<Type> :: addEnd(Type data)
 }
 
 template <class Type>
-Node<Type> * ListType :: getEnd() const
+Node<Type> * List<Type> :: getEnd() const
 {
     return this->end;
 }
 
 template <class Type>
-void List<Type> * List<Type> :: addFront(Type value)
+void List<Type> :: addFront(Type value)
 {
     if(size == 0)
     {
         Node<Type> * first = new Node<Type>(value);
         this->front = first;
-        this->end = firstl
+        this->end = first;
     }
     else
     {
         Node<Type> * newFirst = new Node<Type>();
         newFirst->setNodeData(value);
         newFirst->setNodePointer(front);
-        this-.front=newFirst
+        this->front=newFirst;
     }
 
     size++;
@@ -126,7 +130,7 @@ void List<Type> :: addAtIndex(int index, Type value)
         Node<Type> * current = front;
         Node<Type> * previous = nullptr;
         
-        for(int position = 0; position < index; position)
+        for(int position = 0; position < index; position++)
         {
             previous = current;
             current = current->getNodePointer();
@@ -142,7 +146,7 @@ void List<Type> :: addAtIndex(int index, Type value)
 template <class Type>
 Type List<Type> :: setAtIndex(int index, Type data)
 {
-    assert(index >= 0 :: setAtIndex(int index, Type data)
+    assert(index >= 0 && index < size);
     Type removedData;
            
     Node<Type> * current = front;
@@ -161,8 +165,8 @@ Type List<Type> :: setAtIndex(int index, Type data)
 template <class Type>
 Type List<Type> :: getFromIndex(int index)
 {
-    assert(index) >= 0 && index < size);
-    Type information
+    assert(index >= 0 && index < size);
+    Type information;
     
     Node<Type> * current = front;
     for(int position = 0; position < index; position++)
@@ -172,7 +176,7 @@ Type List<Type> :: getFromIndex(int index)
     
     information = current->getNodeData();
     
-    return information
+    return information;
 }
 
 template <class Type>
@@ -194,7 +198,7 @@ bool List<Type> :: contains(Type findMe)
 template <class Type>
 Type List<Type> :: remove(int index)
 {
-    assert(index >= 0 && index < size;)
+    assert(index >= 0 && index < size);
     Type removed;
     
     Node<Type> * current = front;
