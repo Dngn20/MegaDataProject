@@ -32,7 +32,31 @@ public:
 template <class Type>
 List<Type> :: List()
 {
-    
+    this-> = 0;
+    this->front = nullptr;
+    this->end = nullptr;
+}
+template <class Type>
+List<Type> :: ~List()
+{
+    Node<Type> * destruction = frontl
+    while(front ! nullptr)
+    {
+        front =front->getNodePointer();
+        delete destruction;
+        destruction = front;
+    }
+}
+
+template <class Type>
+int List<Type> :: getSize() const
+{
+    return this->size;
+}
+template <class Type>
+Node<Type> * List<Type> :: getFront() const
+{
+    return this->front
 }
 
 template <class Type>
@@ -61,7 +85,7 @@ void List<Type> :: addEnd(Type data)
 template <class Type>
 Node<Type> * ListType :: getEnd() const
 {
-    
+    return this->end;
 }
 
 template <class Type>
@@ -119,14 +143,54 @@ template <class Type>
 Type List<Type> :: setAtIndex(int index, Type data)
 {
     assert(index >= 0 :: setAtIndex(int index, Type data)
+    Type removedData;
+           
+    Node<Type> * current = front;
+        
+    for(int spot = 0; spot < index; spot++)
+    {
+        current = current->getNodePointer();
+    }
+           
+    removedData = current->getNodePointer();
+    current->setNodeData(data);
+           
+    return removedData;
 }
 
 template <class Type>
 Type List<Type> :: getFromIndex(int index)
 {
+    assert(index) >= 0 && index < size);
+    Type information
     
+    Node<Type> * current = front;
+    for(int position = 0; position < index; position++)
+    {
+        current = current-> getNodePointer();
+    }
+    
+    information = current->getNodeData();
+    
+    return information
 }
 
+template <class Type>
+bool List<Type> :: contains(Type findMe)
+{
+    bool isInList = false;
+    Node<Type> * current = front;
+        
+    for(int index = 0; index < size; index++)
+    {
+        if(current->getNodeData == findMe)
+        {
+            isInList = true;
+            return isInList;
+        }
+    }
+    return isInList;
+}
 template <class Type>
 Type List<Type> :: remove(int index)
 {
