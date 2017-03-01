@@ -24,7 +24,8 @@ BiDirectionalNode&lt;Type&gt; * next) : constructor
 + setNodeData(Type data) : void
 + getPreviousNode() : BiDirectionalNode&lt;Type&gt; *
 + getNextNode() : BiDirectionalNode&lt;Type&gt; *
-setNextNode(BiDirectionalNode&lt;Type&gt; * next): void</panel_attributes>
++ setNextNode(BiDirectionalNode&lt;Type&gt; * next): void
+bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

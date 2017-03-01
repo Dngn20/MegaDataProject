@@ -12,14 +12,14 @@
 template <class Type>
 class BiDirectionalNode : public Node<Type>
 {
-public:
-    BiDirectionalNode();
-    BiDirectionalNode(Type data);
-    BiDirectionalNode(Type data, BiDirectionalNode<Type> * previous, BiDirectionalNode<Type> * next);
 private:
     BiDirectionalNode<Type> * previous;
     BiDirectionalNode<Type> * next;
     Type data;
+public:
+    BiDirectionalNode();
+    BiDirectionalNode(Type data);
+    BiDirectionalNode(Type data, BiDirectionalNode<Type> * previous, BiDirectionalNode<Type> * next);
 }
 template<class Type>
 BiDirectionalNode<Type> :: BiDirectionalNode() : Node()
