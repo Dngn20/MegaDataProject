@@ -30,7 +30,25 @@ void Queue<Type> :: add (Type value)
 {
     Enqueue(value);
 }
-/* 
+
+template <class Type>
+Queue<Type> :: Queue() : DoublyLinkedList<Type>()
+{
+    
+}
+
+template <class Type>
+Queue<Type> :: ~Queue()
+{
+    BiDirectionalNode<Type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextpointer());
+        delete remove;
+        remove = thie->getFront();
+    }
+}
+/*
  Add to Queue:
  Create Node 
  If first - adjust front
@@ -86,6 +104,7 @@ Type Queue<Type> :: Dequeue()
     assert(this-> getSize() > 0);
     
     Type removedValue = this->getFront()->getNodeData();
+    BiDirectionalNode<Type> * removeMe = this->getFront();
     
     if(this->getSize() == 1)
     {
@@ -102,5 +121,13 @@ Type Queue<Type> :: Dequeue()
     
     
     return removedValue();
+}
+
+template <class Type>
+Tye Queue<Type> :: peek()
+{
+    assert(this->getSize() > 0);
+    
+    return this->getFront()->getNodeData();
 }
 #endif /* Queue_h */
