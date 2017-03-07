@@ -256,10 +256,19 @@ m2=0..n</panel_attributes>
     </coordinates>
     <panel_attributes>Queue
 --
-
+- front: BiDirectionalNode&lt;Type&gt; *
+- end: BiDirectionalNode&lt;Type&gt; *
+- size: int
 --
 + add(Type data) : void
-+ remove(int index) : Type</panel_attributes>
++ remove(int index) : Type
+
++ Queue(): constructor
++ Queue(): ~destructor
+
++ enqueue(Type data): void
++ dequeue() : Type
++ peek(): Type</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -323,9 +332,19 @@ lw=2
     </coordinates>
     <panel_attributes>Stack
 --
-
+front: BiDirectionalNode&lt;Type&gt; *
+end: BiDirectionalNode&lt;Type&gt; * 
+size: int
 --
-</panel_attributes>
++Stack() : constructor
++ ~Stack() destructor
+
++ push(Type data): void
++ pop() : Type
++ peek(): Type
+
++ add(Type data): void
++ remove(int index): Type</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -338,10 +357,14 @@ lw=2
     </coordinates>
     <panel_attributes>CircularlyLinkedList
 --
-- front : BiDirectionalNode * 
+- front : BiDirectionalNode &lt;Type&gt; * 
+- end: BiDirectionalNode&lt;Type&gt; *
 --
 + add(Type) : void
-+ addAtIndex(int index, Type data) : void</panel_attributes>
++ addAtIndex(int index, Type data) : void
+
++ CircularList(): constructor
++ ~CircularList(): destructor</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
