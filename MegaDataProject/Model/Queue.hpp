@@ -25,7 +25,7 @@ public:
     Type Dequeue();
     Type Peek();
 };
-temple <class Type>
+template <class Type>
 void Queue<Type> :: add (Type value)
 {
     Enqueue(value);
@@ -45,7 +45,7 @@ Queue<Type> :: ~Queue()
     {
         this->setFront(this->getFront()->getNextpointer());
         delete remove;
-        remove = thie->getFront();
+        remove = this->getFront();
     }
 }
 /*
@@ -62,7 +62,7 @@ void Queue<Type> :: Enqueue(Type insertedValue)
 {
     BiDirectionalNode<Type> * added = BiDirectionalNode<Type>(insertedValue);
     
-    if(if this->getSize() == 0 || this->getFront() == nullptr \\ this->getEnd() == nullptr)
+    if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {
         this->setFront(added);
     }
@@ -71,7 +71,7 @@ void Queue<Type> :: Enqueue(Type insertedValue)
         this->getEnd()->setNextPointer(added);
     }
     this->setEnd(added);
-    this->setSize(this->getSize() + 1)
+    this->setSize(this->getSize() + 1);
 }
 
 /*
@@ -113,7 +113,7 @@ Type Queue<Type> :: Dequeue()
     }
     else
     {
-        this->setFront(removeMe->getNextPointer())
+        this->setFront(removeMe->getNextPointer());
 
     }
     delete removeMe;
@@ -124,7 +124,7 @@ Type Queue<Type> :: Dequeue()
 }
 
 template <class Type>
-Tye Queue<Type> :: peek()
+Type Queue<Type> :: Peek()
 {
     assert(this->getSize() > 0);
     

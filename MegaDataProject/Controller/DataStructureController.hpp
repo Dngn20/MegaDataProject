@@ -11,6 +11,11 @@
 
 #include "../Model/Node.hpp"
 #include <string>
+#include "../Model/FoodItem.hpp"
+#include "../Model/Stack.hpp"
+#include "../Model/Timer.hpp"
+#include "../Model/DoublyLinkedList.hpp"
+#include "../Model/Queue.hpp"
 #include "../Model/Array.hpp"
 #include "../Model/List.hpp"
 using namespace std;
@@ -24,6 +29,8 @@ private:
     void testNodes();
     void testAdvancedFeatures();
     void testList();
+    void testFoodQueue();
+    void testIntStack();
     
     
 public:

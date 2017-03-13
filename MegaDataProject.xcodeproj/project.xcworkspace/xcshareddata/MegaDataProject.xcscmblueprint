@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0A9F946B02DBFE5803B1F1CF671D7414C931F4D9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0A9F946B02DBFE5803B1F1CF671D7414C931F4D9" : 9223372036854775807,
+    "FE1EF729CC1C479EAC3A9E0C6D5A9445E8930BD8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2405535F-0E96-44BB-857F-FA613B4F22CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0A9F946B02DBFE5803B1F1CF671D7414C931F4D9" : "MegaDataProject\/",
+    "FE1EF729CC1C479EAC3A9E0C6D5A9445E8930BD8" : "FirstCPlusPlusPorject\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MegaDataProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MegaDataProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Dngn20\/MegaDataProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A9F946B02DBFE5803B1F1CF671D7414C931F4D9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Dngn20\/FirstCPlusPlusPorject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FE1EF729CC1C479EAC3A9E0C6D5A9445E8930BD8"
+    }
+  ]
+}

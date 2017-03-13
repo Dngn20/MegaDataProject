@@ -9,6 +9,7 @@
 #ifndef Stack_h
 #define Stack_h
 
+#include "../Model/DoublyLinkedList.hpp"
 template <class Type>
 class Stack : public DoublyLinkedList<Type>
 {
@@ -24,7 +25,7 @@ private:
 };
 
 template <class Type>
-Stack<Type> :: Stack() : DoubleLinkedList<Type>()
+Stack<Type> :: Stack() : DoublyLinkedList<Type>()
 {
     
 }
@@ -63,12 +64,12 @@ void Stack<Type> :: push(Type addedThing)
 template <class Type>
 Type Stack<Type> :: remove(int index)
 {
-    assert(index == this->getSize() - 1 && this->getSize() > 0)
+    assert(index == this->getSize() - 1 && this->getSize() > 0);
     return pop();
 }
 
 template <class Type>
-Type Stak<Type> :: pop()
+Type Stack<Type> :: pop()
 {
     assert(this->getSize() > 0);
     Type removed = this->getEnd()->getNodeData();
@@ -79,7 +80,7 @@ Type Stak<Type> :: pop()
         update->setNextPointer(nullptr);
     }
     
-    delte this->getend();
+    delete this->getEnd();
     
     this->setEnd(update);
     
@@ -87,31 +88,10 @@ Type Stak<Type> :: pop()
 }
 
 template <class Type>
-Type Stack<Type> :: peel()
+Type Stack<Type> :: peek()
 {
     assert(this->getSize() > 0);
     return this->getEnd()->getNodeData();
 }
 
-template <class Type>
-Type Stack<Type> :: pop()
-{
-    assert(this->getSize() > 0);
-    Type removed = this ->getEnd()->getNodeData();
-    
-    BiDirectionalNode<Type> * update = this->getEnd()
-    
-    if(update != nullptr)
-    {
-        update->setNextPointer(nullptr);
-    }
-    
-    delete this->getEnd();
-    
-    this->setEnd(update);
-
-    this->setSize(this->getSize() - 1);
-    
-    return removed;
-}
 #endif /* Stack_h */

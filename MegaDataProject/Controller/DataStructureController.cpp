@@ -90,3 +90,22 @@ void DataStructureController :: testList()
     cout << "Size should read 3 and is " << sample.getSize() << endl;
 }
 
+void DataStructureController :: testFoodQueue()
+{
+    Queue<FoodItem> tastyFood;
+    FoodItem rice("rice");
+    
+    tastyFood.Enqueue(rice);
+    FoodItem bread;
+    tastyFood.add(bread);
+    
+    FoodItem removed = tastyFood.dequeue();
+    cout << "The item removed form the queue was: " << " and should be: bread " << endl;
+}
+
+void DataStructureController :: testIntStack()
+{
+    
+    
+}
+
