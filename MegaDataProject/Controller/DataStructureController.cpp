@@ -122,7 +122,7 @@ void DataStructureController :: testIntStack()
     cout <<"The front of the stack is 2 : " << numberStack.peek() << endl;
     numberStack.push(4);
     cout <<"The front of the stack is 4 : " << numberStack.peek() << endl;
-    numberStack.remove(4);
+    numberStack.remove(2);
     cout <<"The front of the stack is 2 : " << numberStack.peek() << endl;
     cout <<"The stack is 2 big and it is: " << numberStack.getSize() << endl;
 }
