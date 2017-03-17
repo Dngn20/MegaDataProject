@@ -46,7 +46,7 @@ void Stack<Type> :: push(Type addedThing)
 {
     BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(addedThing);
     
-    if(this->getSixe() == 0 || this->getFront() == nullptr ||this->getEnd() == nullptr)
+    if(this->getSize() == 0 || this->getFront() == nullptr ||this->getEnd() == nullptr)
     {
         this->setFront(addToStack);
         
@@ -75,6 +75,9 @@ Type Stack<Type> :: pop()
     Type removed = this->getEnd()->getNodeData();
     
     BiDirectionalNode<Type> * update = this->getEnd();
+    update = update->getPreviousPointer();
+    
+    
     if(update != nullptr)
     {
         update->setNextPointer(nullptr);
@@ -85,6 +88,8 @@ Type Stack<Type> :: pop()
     this->setEnd(update);
     
     this->setSize(this->getSize() - 1);
+    
+    return removed;
 }
 
 template <class Type>

@@ -43,7 +43,7 @@ Queue<Type> :: ~Queue()
     BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront() != nullptr)
     {
-        this->setFront(this->getFront()->getNextpointer());
+        this->setFront(this->getFront()->getNextPointer());
         delete remove;
         remove = this->getFront();
     }
@@ -60,7 +60,7 @@ Queue<Type> :: ~Queue()
 template <class Type>
 void Queue<Type> :: Enqueue(Type insertedValue)
 {
-    BiDirectionalNode<Type> * added = BiDirectionalNode<Type>(insertedValue);
+    BiDirectionalNode<Type> * added = new BiDirectionalNode<Type>(insertedValue);
     
     if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {
@@ -117,10 +117,10 @@ Type Queue<Type> :: Dequeue()
 
     }
     delete removeMe;
-    this->setSize(this->getsize()-1);
+    this->setSize(this->getSize()-1);
     
     
-    return removedValue();
+    return removedValue;
 }
 
 template <class Type>

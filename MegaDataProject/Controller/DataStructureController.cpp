@@ -31,7 +31,8 @@ void DataStructureController :: start()
     cout << "Starting the project" << endl;
     cout << "Switching to the aray testing" << endl;
     cout << "Finished testing" << endl;
-    testList();
+//    testFoodQueue();
+    testIntStack();
 }
 
 void DataStructureController :: testIntArray()
@@ -99,13 +100,30 @@ void DataStructureController :: testFoodQueue()
     FoodItem bread;
     tastyFood.add(bread);
     
-    FoodItem removed = tastyFood.dequeue();
-    cout << "The item removed form the queue was: " << " and should be: bread " << endl;
+    bread.setDelicious(true);
+    
+    cout << "The front of the queue should be rice and is : " << tastyFood.Peek().getFoodName() << endl;
+    cout << "Size of the queue should be 2 and is : " << tastyFood.getSize() << endl;
+    
+    
+    FoodItem removed = tastyFood.Dequeue();
+    cout << "The item removed form the queue was Bread and is: " << " bread " << endl;
 }
 
 void DataStructureController :: testIntStack()
 {
+    Stack<int> numberStack;
+    numberStack.add(1);
+    numberStack.add(2);
+    numberStack.add(3);
     
-    
+    cout << "The front of the stack is 3 : " << numberStack.peek() << endl;
+    numberStack.pop();
+    cout <<"The front of the stack is 2 : " << numberStack.peek() << endl;
+    numberStack.push(4);
+    cout <<"The front of the stack is 4 : " << numberStack.peek() << endl;
+    numberStack.remove(4);
+    cout <<"The front of the stack is 2 : " << numberStack.peek() << endl;
+    cout <<"The stack is 2 big and it is: " << numberStack.getSize() << endl;
 }
 

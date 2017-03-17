@@ -10,6 +10,7 @@
 #define FoodItem_hpp
 
 #include <string>
+
 using namespace std;
 
 class FoodItem

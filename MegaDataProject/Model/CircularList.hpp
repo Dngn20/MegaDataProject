@@ -64,7 +64,7 @@ BiDirectionalNode<Type> * findNode(int index)
     }
     else
     {
-        nodeToFnt = ths->getEnd();
+        nodeToFind = this->getEnd();
         for(int spot = this->getSize() -1; spot > index; spot--)
         {
             nodeToFind = nodeToFind->getPreviousPointer();

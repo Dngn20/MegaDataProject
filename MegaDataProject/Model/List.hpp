@@ -115,7 +115,7 @@ void List<Type> :: addFront(Type value)
 template <class Type>
 void List<Type> :: addAtIndex(int index, Type value)
 {
-    asser(index >0 && index <= size);
+    assert(index >0 && index <= size);
     if(index ==0)
     {
         addFront(value);
