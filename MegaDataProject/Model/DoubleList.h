@@ -6,6 +6,11 @@
 //  Copyright © 2017 Nguyen, Duncan. All rights reserved.
 //
 
+#ifndef DoubleList_hpp
+#define DoubleList_hpp
+
+#include "DoublyLinkedList.hpp"
+
 template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
@@ -82,6 +87,7 @@ Type DoubleList<Type> :: remove(int index)
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
     derp = nodeToTakeOut->getNodeData();
+    
     if(this->getSize() > 1)
     {
         BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
@@ -91,36 +97,33 @@ Type DoubleList<Type> :: remove(int index)
         {
             prev->setNextPointer(next);
         }
-        if(next !nullptr)
+        if(next != nullptr)
         {
             next->setPreviousPointer(prev);
         }
         
-        prev->setNextPointer(next);
-        next->setPreviousPointer(prev);
-        
         if(index == 0)
         {
-            this->setFront(this->getFront()->getNextpointer());
+            this->setFront(this->getFront()->getNextPointer());
             this->getFront()->setPreviousPointer(nullptr);
         }
-        else if(index == this->getSze() -1)
+        else if(index == this->getSize() -1)
         {
-            this->setEnd(this->getEnd->getPreviousPointer())
+            this->setEnd(this->getEnd()->getPreviousPointer());
             this->getEnd()->setNextPointer(nullptr);
         }
-
     }
-        else
+    else
     {
         this->setFront(nullptr);
-        this-setEnd(nullptr);
+        this->setEnd(nullptr);
     }
-
+    
     delete nodeToTakeOut;
     
     this->setSize(this->getSize() - 1);
     return derp;
+    
 }
 
 template <class Type>

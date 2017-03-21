@@ -32,7 +32,9 @@ void DataStructureController :: start()
     cout << "Switching to the aray testing" << endl;
     cout << "Finished testing" << endl;
 //    testFoodQueue();
-    testIntStack();
+//    testIntStack();
+    testDoubleList();
+//    testLists();
 }
 
 void DataStructureController :: testIntArray()
@@ -126,4 +128,89 @@ void DataStructureController :: testIntStack()
     cout <<"The front of the stack is 2 : " << numberStack.peek() << endl;
     cout <<"The stack is 2 big and it is: " << numberStack.getSize() << endl;
 }
+
+void DataStructureController :: testDoubleList()
+{
+    DoubleList<int> somethingList;
+    somethingList.add(45123);
+    somethingList.add(9001);
+
+    cout << "Index should get 45123 and gets " << somethingList.getFromIndex(0) << endl;
+    cout << "Index should get 9001 and gets " << somethingList.getFromIndexFast(1) << endl;
+
+    
+    
+    
+    
+    
+}
+
+void DataStructureController :: testLists()
+
+{
+    List<int> numberList;
+    
+    numberList.addFront(3);
+    
+    numberList.addFront(5);
+    
+    numberList.addEnd(8);
+    
+    cout << "Size is 3 and is " << numberList.getSize() << endl;
+    
+    cout << "End should be 8 and is: " << numberList.getEnd()->getNodeData() << endl;
+    
+    cout << "Head should be 5 and is: " << numberList.getFront()->getNodeData() << endl;
+   
+    cout << "Index should read 3 and is " << numberList.getFromIndex(1) << endl;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

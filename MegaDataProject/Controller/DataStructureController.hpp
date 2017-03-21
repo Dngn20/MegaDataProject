@@ -15,6 +15,7 @@
 #include "../Model/Stack.hpp"
 #include "../Model/Timer.hpp"
 #include "../Model/DoublyLinkedList.hpp"
+#include "../Model/DoubleList.h"
 #include "../Model/Queue.hpp"
 #include "../Model/Array.hpp"
 #include "../Model/List.hpp"
@@ -31,6 +32,8 @@ private:
     void testList();
     void testFoodQueue();
     void testIntStack();
+    void testDoubleList();
+    void testLists();
     
     
 public:

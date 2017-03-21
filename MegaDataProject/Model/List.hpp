@@ -187,7 +187,7 @@ bool List<Type> :: contains(Type findMe)
         
     for(int index = 0; index < size; index++)
     {
-        if(current->getNodeData == findMe)
+        if(current->getNodeData() == findMe)
         {
             isInList = true;
             return isInList;
@@ -210,18 +210,17 @@ Type List<Type> :: remove(int index)
         toBeRemoved = front;
         this->front = front->getnextPointer();
     }
-    else if(index == size -1)
+    else if(index == size - 1)
     {
         for(int spot = 0; spot < index; spot++)
         {
             previous = current;
             current = current->getnextPointer();
         }
-       
+        
         toBeRemoved = current;
         previous->setnextPointer(nullptr);
         this->end = previous;
-
     }
     else
     {
@@ -234,14 +233,13 @@ Type List<Type> :: remove(int index)
         toBeRemoved = current;
         current = toBeRemoved->getnextPointer();
         previous->setnextPointer(current);
-
+        
     }
     removed = toBeRemoved->getNodeData();
     
     delete toBeRemoved;
     
     size--;
-    return removed; 
+    return removed;
 }
-
 #endif /* List_hpp */
