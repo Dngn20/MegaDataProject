@@ -24,7 +24,8 @@ public:
     void addAtIndex(int index, Type value);
     Type getFromIndex(int index);
     Type getFromIndexFast(int index);
-    int indexOf(Type findMe))
+    int indexOf(Type findMe);
+    int nextIndexOf(Type value , int position);
 };
 
 template <class Type>
@@ -174,7 +175,7 @@ int DoubleList<Type> :: indexOf(Type findMe)
 }
 
 template <class Type>
-int DoubleList<Type> :: nestIndexOf(Type vaule, int position)
+int DoubleList<Type> :: nextIndexOf(Type value, int position)
 {
     assert(position >= 0 && position < this->getSize());
     
@@ -186,9 +187,9 @@ int DoubleList<Type> :: nestIndexOf(Type vaule, int position)
     {
         if(index >= position)
         {
-            current->getNodeData() == value)
+            if(current->getNodeData() == value)
             {
-                retur index;
+                return index;
             }
         }
         current = current->getNextPointer();
