@@ -242,4 +242,5 @@ Type List<Type> :: remove(int index)
     size--;
     return removed;
 }
+
 #endif /* List_hpp */

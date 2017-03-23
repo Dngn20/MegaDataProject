@@ -24,6 +24,7 @@ public:
     void addAtIndex(int index, Type value);
     Type getFromIndex(int index);
     Type getFromIndexFast(int index);
+    int indexOf(Type findMe))
 };
 
 template <class Type>
@@ -152,4 +153,47 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     valueAtIndex = reference->getNodeData();
     return valueAtIndex;
 }
+
+template <class Type>
+int DoubleList<Type> :: indexOf(Type findMe)
+{
+    int index = -1;
+    
+    BiDirectionalNode<Type> * searchPointer = this->getFront();
+    
+    for(int spot = 0; spot < this->getSize(); spot++)
+    {
+        if(findMe == searchPointer->getNodeData())
+        {
+            return spot;
+        }
+        searchPointer = searchPointer->getNextPointer();
+    }
+    
+    return index;
+}
+
+template <class Type>
+int DoubleList<Type> :: nestIndexOf(Type vaule, int position)
+{
+    assert(position >= 0 && position < this->getSize());
+    
+    int nextIndex = -1;
+    
+    BiDirectionalNode<Type> * current = this->getFront();
+    
+    for(int index = 0; index < this->getSize(); index++)
+    {
+        if(index >= position)
+        {
+            current->getNodeData() == value)
+            {
+                retur index;
+            }
+        }
+        current = current->getNextPointer();
+    }
+    return nextIndex;
+}
+
 #endif /* DoubleList_hpp */
