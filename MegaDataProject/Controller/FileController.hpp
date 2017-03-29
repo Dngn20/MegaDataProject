@@ -12,8 +12,9 @@
 #include <stdio.h>
 #include "../Model/DoubleList.h"
 #include "../Model/FoodItem.hpp"
-#include  <string>
+#include <string>
 #include <fstream>
+#include <iostream>
 #include <sstream>
 
 using namespace std;
@@ -23,6 +24,7 @@ class FileController
 private:
     DoubleList<FoodItem> foodItemList;
 public:
-    DoubleList<FoodItem> readDataFromFile(string filename);
+    DoubleList<FoodItem> readFoodItemDataFromFileAsList(string filename);
+    void writeFoodItemDataStatistics(DoubleList<FoodItem> source, string filename);
 };
 #endif /* FileController_hpp */
