@@ -72,7 +72,7 @@ int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 }
 
 template <class Type>
-void BinarySearchTree<> :: inOrderTranversal(BinarySearchTree<NodeType> * inStart)
+void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inStart)
 {
     
 }
