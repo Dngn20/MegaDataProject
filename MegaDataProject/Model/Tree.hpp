@@ -73,7 +73,7 @@ bool Tree<Type> :: isBalanced() const
 template <class Type>
 void Tree<Type> :: setHeight(int height)
 {
-    this->height = height
+    this->height = height;
 }
 
 template <class Type>
