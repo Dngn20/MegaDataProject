@@ -104,6 +104,89 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * p
     
 }
 
+template <class>
+bool BinarySearchTree<Type> :: contains(Type itemToFind)
+{
+    BinarySearchTree<Type> * current = root;
+    if(current == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            if(itemToFind == current->getNodeData())
+            {
+                return true;
+            }
+            else if(itemToFind < current->getNodeData())
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        return false;
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
+{
+    if(root == nullptr)
+    {
+        cout << "Empty tree so removeal is not possible" << endl;
+    }
+    else
+    {
+        BinarySearchTreeNode<Type> * current = root;
+        BinarySearchTreeNode<Type> * previous = nullptr;
+        bool hasBeenndFound = false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(current->getNodeData() == getRiidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                preivous = current;
+                if(getRidOFMe < current->getNodeData())
+                {
+                    current = current->getLeftchild();
+                }
+                else
+                {
+                    current = current->getRightChild();
+                }
+            }
+        }
+    }
+    if(current == nullptr)
+    {
+        cerr << "Item not found, removal unsuccessful" << endl;
+    }
+    else if(hasBeenFound)
+    {
+        if(current == root)
+        {
+            removeNode(root);
+        }
+        else if(getRidOfMe < preivous->getNodeData())
+        {
+            removeNode(previous->getLeftChild());
+        }
+        else
+        {
+            removenode(preivous->getRightChild());
+        }
+    }
+    
+}
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
