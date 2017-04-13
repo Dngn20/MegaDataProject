@@ -187,6 +187,105 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
     }
     
 }
+
+template <class Type>
+void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & removeMe)
+{
+    BinarySearchTree<Type> * current;
+    BinarySearchTree<Type> * previous;
+    BinarySearchTree<Type> * temp;
+    
+    previous = removeMe->getRootPointer();
+    
+    //leaf
+    if(removeMe->getRightChild() == nullptr && removeMe->getLeftChild() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = nullptr;
+        
+        if(previous != nullptr && removeMe->getNodeData < previous->getNodeData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        {
+            previous->setRightChold(removeMe);
+        }
+        delete temp;
+    }
+    //left child only
+    else if(removeMe->getRightChild() == nullptr)
+    {
+        temp=removeMe;
+        removeMe = removeMe->getLeftChild();
+        
+        if(previous != nullptr && temp->getNodeData < previous->getNodeData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && temp->getNodeData() > previous->getNodeData())
+        {
+            previous->setRightChold(removeMe);
+        }
+        removeMe->setRootPointer(previous);
+        
+        delete temp;
+    }
+    //right Child only
+    else if(removeMe->getLeftChild() == nullptr)
+    {
+        temp=removeMe;
+        removeMe = removeMe->getRightChild();
+        
+        if(previous != nullptr && removeMe->getNodeData < previous->getNodeData())
+        {
+            previous->setLeftChild(removeMe);
+        }
+        else if(previous != nullptr && removeMe->getNodeData() > previous->getNodeData())
+        {
+            previous->setRightChold(removeMe);
+        }
+        removeMe->setRootPointer(previous);
+        
+        delete temp;
+    }
+    
+    //both children
+    else
+    {
+        current = removeMe->getLeftChild();
+        previous = nullptr;
+        
+        while(current->getRightChiild() != nullptr)
+        {
+            previous = current;
+            current = current->getRiht();
+        }
+        
+        removeMe->setNodeData(current->getNodeData());
+    
+        if(previous == nullptr)
+        {
+            removeMe->setLeftChild(current->getNodeData());
+            if(current->getLeftChild() != nullptr)
+            {
+                current->getLeftChild()->setRootPointer(removeMe);
+
+            }
+        }
+        else
+        {
+            removeMe->setRightChild(current->getLeftChild());
+            current->getLeftChild()->setRootPointer(removeMe);
+        }
+        
+        delete current;
+    }
+    if(removeMe == nullptr || removeMe->getRootPointer == nullptr)
+    {
+        setRoot((removeMe)
+    }
+}
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
