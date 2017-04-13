@@ -23,6 +23,8 @@ private:
     void preOrderTraversal(BinarySearchTreeNode<Type> * preStart);
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     
+    void removeodw(BinarySearchTreeNode<Type> * & removeMe);
+    
 public:
     BinarySearchTree();
     ~BinarySearchTree();
@@ -33,6 +35,14 @@ public:
     void inOrderTraversal();
     void preOrderTranversal();
     void postOrderTranversal();
+    
+    void printToFile();
+    
+//    void demotrversalSteps(BinarySearchTreeNode<Type> * root);
+    
+    bool contains(Type value);
+    void insert(TYpe ItemToInsert);
+    void remove(Type value);
 };
 
 template <class Type>
