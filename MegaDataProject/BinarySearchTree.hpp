@@ -103,10 +103,35 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 {
     postOrderTraversal(root);
 }
+                    
+template <class Type>
+int BinarySearchTree<Type> :: calculateHeight(BinarySearchTreeNode<Type> * start)
+{
+    if(start == nullptr)
+    {
+    return 0;
+    }
+    else
+    {
+        return 1 + max(calculateHeight(start->getLeftChild()), calculateHeight(start-.getrightChild()));
+    }
+}
 template <class Type>
 int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 {
-    return -99;
+    int count = 1;
+    if(start == nullptr)
+    {
+        return 0;
+    }
+    else
+    {
+        count += calculateSize(start->getLeftChild());
+        count += calculateSize(start->getRightChild());
+        return count;
+    }
+    
+    
 }
 
 template <class Type>
@@ -390,6 +415,9 @@ bool BinarySearchTree<Type> :: isBalanced()
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete()
 {
+    int index = 0;
+    int size = getSize();
+    
     return isComplete(root);
 }
 #endif /* BinarySearchTree_h */
