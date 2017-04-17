@@ -37,6 +37,8 @@ BiDirectionalNode<Type> :: BiDirectionalNode() : Node<Type>()
     this->previous = nullptr;
 }
 
+
+
 template <class Type>
 BiDirectionalNode<Type> :: BiDirectionalNode(Type data) : Node<Type>(data)
 {

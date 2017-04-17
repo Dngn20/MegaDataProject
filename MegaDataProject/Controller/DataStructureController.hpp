@@ -19,6 +19,7 @@
 #include "../Model/Queue.hpp"
 #include "../Model/Array.hpp"
 #include "../Model/List.hpp"
+#include "../Model/BinarySearchTree.hpp"
 using namespace std;
 
 class DataStructureController
@@ -34,6 +35,8 @@ private:
     void testIntStack();
     void testDoubleList();
     void testLists();
+    void testBinarySearchTreeOperations();
+
     
     
 public:

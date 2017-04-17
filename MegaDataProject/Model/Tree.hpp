@@ -6,7 +6,7 @@
 //  Copyright © 2017 Nguyen, Duncan. All rights reserved.
 //
 
-#ifndef Tree_h #define Tree_h
+#ifndef Tree_h //#define Tree_h
 #include <assert.h>
 template <class Type> class Tree { public:
     //Traversals
