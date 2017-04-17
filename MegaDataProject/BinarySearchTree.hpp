@@ -368,4 +368,28 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
     }
     insertMe->setRootPointer(previous);
 }
+        
+template <class Type>
+int BinarySearchTree<Type> :: getSize()
+{
+    return calculateSize(root);
+}
+        
+template <class Type>
+int BinarySearchTree<Type> :: getHeight()
+{
+    return calculateHeight(root);
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced()
+{
+    return isBalanced(root);
+}
+        
+template <class Type>
+bool BinarySearchTree<Type> :: isComplete()
+{
+    return isComplete(root);
+}
 #endif /* BinarySearchTree_h */
