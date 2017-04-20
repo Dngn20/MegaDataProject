@@ -19,6 +19,9 @@
 #include "../Model/Queue.hpp"
 #include "../Model/Array.hpp"
 #include "../Model/List.hpp"
+#include "../Model/CrimeData.hpp"
+#include "../Model/CrimeData.cpp"
+#include "../Controller/FileController.hpp"
 #include "../Model/BinarySearchTree.hpp"
 using namespace std;
 
@@ -36,6 +39,7 @@ private:
     void testDoubleList();
     void testLists();
     void testBinarySearchTreeOperations();
+    void testBinarySearchData();
 
     
     

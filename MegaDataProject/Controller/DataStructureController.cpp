@@ -207,7 +207,41 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
 }
 
+void DataStructureController :: testBinarySearchData()
 
+{
+    
+    FileController fileData;
+    
+    Timer treeTimer;
+    
+    treeTimer.startTimer();
+    
+    BinarySearchTree<CrimeData> crimeTree = fileData.readCrimeDataToBinarySearchTree("/Users/dngu9879/Documents/crimes.csv");
+    
+    treeTimer.finishTimer();
+    
+    
+    
+    int count = crimeTree.getSize();
+    
+    int height = crimeTree.getHeight();
+    
+    bool complete = crimeTree.isComplete();
+    
+    bool balanced = crimeTree.isBalanced();
+    
+    
+    
+    cout << "The count of the tree is: " << count << ", the height is " << height << ".\n The tree's balanced status is " << balanced << ", and its complete status is " << complete << endl;
+    
+    cout << "The time to read in the tree was: " << endl;
+    
+    treeTimer.displayTimerInformation();
+    
+    
+    
+}
 
 
 

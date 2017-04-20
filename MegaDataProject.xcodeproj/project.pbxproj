@@ -56,6 +56,7 @@
 		9CA72D091E675D03004D5AF1 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		9CA72D0A1E676319004D5AF1 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = Model/Queue.hpp; sourceTree = "<group>"; };
 		9CA72D0B1E676849004D5AF1 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
+		9CBFDB841EA7EEC500C86FA5 /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 		9CC68A3F1E5248B900AA1418 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		9CEB857B1E54E36000E8C34A /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +121,7 @@
 				9C93C7C11E7726E7000D29AA /* Timer.cpp */,
 				9C93C7C21E7726E7000D29AA /* Timer.hpp */,
 				9C3CA8FC1E9D5831006FE3A4 /* Tree.hpp */,
+				9CBFDB841EA7EEC500C86FA5 /* AVLTree.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";

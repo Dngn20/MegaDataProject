@@ -8,9 +8,68 @@
 
 #include "CrimeData.hpp"
 #include <cmath>
+#include <iostream>
+#include <sstream>
+
+using namespace std;
 
 CrimeData :: CrimeData()
 {
+    
+}
+
+CrimeData :: CrimeData(string currentCSVLine)
+{
+    stringstream parseCSV(currentCSVLine);
+    
+    string department, tempPopulation, tempProperty, tempBurglary, tempLarceny, tempMotor, tempViolent, tempAssault, tempMurder, tempRape, tempRobbery, state, tempAllProperty, tempAllBurglary, tempAllLarceny, tempAllMotor, tempAllViolent, tempAllAssault, tempAllMurder, tempAllRape, tempAllRobbery, tempYear;
+    
+    getline(parseCSV, department, ',');
+    getline(parseCSV, tempPopulation, ',');
+    getline(parseCSV, tempProperty, ',');
+    getline(parseCSV, tempBurglary, ',');
+    getline(parseCSV, tempLarceny, ',');
+    getline(parseCSV, tempMotor, ',');
+    getline(parseCSV, tempViolent, ',');
+    getline(parseCSV, tempAssault, ',');
+    getline(parseCSV, tempMurder, ',');
+    getline(parseCSV, tempRape, ',');
+    getline(parseCSV, tempRobbery, ',');
+    getline(parseCSV, state, ',');
+    getline(parseCSV, tempAllProperty, ',');
+    getline(parseCSV, tempAllBurglary, ',');
+    getline(parseCSV, tempAllLarceny, ',');
+    getline(parseCSV, tempAllMotor, ',');
+    getline(parseCSV, tempAllViolent, ',');
+    getline(parseCSV, tempAllAssault, ',');
+    getline(parseCSV, tempAllMurder, ',');
+    getline(parseCSV, tempAllRape, ',');
+    getline(parseCSV, tempAllRobbery, ',');
+    getline(parseCSV, tempYear, ',');
+    
+    this->setDepartment(department);
+    this->setPopulation(stoi(tempPopulation));
+    this->setAllPropertyRates(stod(tempProperty));
+    this->setBurglaryRates(stod(tempBurglary));
+    this->setLarcenyRates(stod(tempLarceny));
+    this->setMotorRates(stod(tempMotor));
+    this->setAllViolentRates(stod(tempViolent));
+    this->setAssaultRates(stod(tempAssault));
+    this->setMurderRates(stod(tempMurder));
+    this->setRapeRates(stod(tempRape));
+    this->setRobberyRates(stod(tempRobbery));
+    this->setState(state);
+    this->setAllPropertyCrime(stoi(tempAllProperty));
+    this->setAllBurglary(stoi(tempAllBurglary));
+    this->setAllLarceny(stoi(tempAllLarceny));
+    this->setAllMotor(stoi(tempAllMotor));
+    this->setAllViolent(stoi(tempAllViolent));
+    this->setAllAssault(stoi(tempAllAssault));
+    this->setAllMurder(stoi(tempAllMurder));
+    this->setAllRape(stoi(tempAllRape));
+    this->setAllRobbery(stoi(tempAllRobbery));
+    this->setYear(stoi(tempYear));
+    
 }
 
 string CrimeData :: getDepartment() const
@@ -246,10 +305,9 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
         comparisonFactor += 3;
     }
     
-    if(this->getAllPropertyRates() > comparedData.getAllPropertyRates())
+    if(this->getAllPropertyRates() < comparedData.getAllPropertyRates())
     {
-        comparisonFactor -=2.5;
-        
+        comparisonFactor -= 2.5;
     }
     else
     {
@@ -263,12 +321,11 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
     else
     {
         comparisonFactor += 5;
-
     }
     
     if(this->getMurderRates() < comparedData.getMurderRates())
     {
-        comparisonFactor-=3;
+        comparisonFactor -= 3;
     }
     else
     {
@@ -283,11 +340,11 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
     {
         populationFactor = .5;
     }
-    else if(populationDifference > 250000 && populationDifference < 50000)
+    else if(populationDifference >= 250000 && populationDifference < 500000)
     {
         populationFactor = 1.5;
     }
-    else if(populationDifference >= 500000 && populationDifference < 100000)
+    else if(populationDifference >= 500000 && populationDifference < 1000000)
     {
         populationFactor = 2.0;
     }
@@ -303,47 +360,47 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
         thisIsLessCrime = true;
     }
     return thisIsLessCrime;
-}bool CrimeData :: operator > (const CrimeData & comparedData)
+}
+
+bool CrimeData :: operator > (const CrimeData & comparedData)
 {
     bool thisIsMoreCrime = false;
     double comparisonFactor = 0.0;
     
     if(this->getAllViolent() > comparedData.getAllViolent())
     {
-        comparisonFactor -= 3;
+        comparisonFactor += 3;
     }
     else
     {
-        comparisonFactor += 3;
+        comparisonFactor -= 3;
     }
     
     if(this->getAllPropertyRates() > comparedData.getAllPropertyRates())
     {
-        comparisonFactor -=2.5;
-        
+        comparisonFactor += 2.5;
     }
     else
     {
-        comparisonFactor += 2.5;
+        comparisonFactor -= 2.5;
     }
     
     if(this->getAllViolentRates() > comparedData.getAllViolentRates())
     {
-        comparisonFactor -= 5;
+        comparisonFactor += 5;
     }
     else
     {
-        comparisonFactor += 5;
-        
+        comparisonFactor -= 5;
     }
     
     if(this->getMurderRates() > comparedData.getMurderRates())
     {
-        comparisonFactor-=3;
+        comparisonFactor += 3;
     }
     else
     {
-        comparisonFactor += 3;
+        comparisonFactor -= 3;
     }
     
     double populationDifference = (this->getPopulation() - comparedData.getPopulation());
@@ -354,11 +411,11 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
     {
         populationFactor = .5;
     }
-    else if(populationDifference >= 250000 && populationDifference < 50000)
+    else if(populationDifference >= 250000 && populationDifference < 500000)
     {
         populationFactor = 1.5;
     }
-    else if(populationDifference >= 500000 && populationDifference < 100000)
+    else if(populationDifference >= 500000 && populationDifference < 1000000)
     {
         populationFactor = 2.0;
     }
@@ -369,7 +426,7 @@ bool CrimeData :: operator < (const CrimeData & comparedData)
     
     comparisonFactor += populationFactor;
     
-    if(comparisonFactor > 0)
+    if(comparisonFactor < 0)
     {
         thisIsMoreCrime = true;
     }
@@ -383,5 +440,10 @@ bool CrimeData :: operator == (const CrimeData & compared)
     return isThisTheSame;
 }
 
+ostream & operator << (ostream &outputStream, const CrimeData & outputData)
 
-
+{
+    
+    return outputStream << outputData.getDepartment() << "had " << outputData.getAllViolentRates() << " in year: " << outputData.getYear();
+    
+}
