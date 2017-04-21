@@ -26,7 +26,7 @@ private:
     BinarySearchTree<Type> * insertNode(BinarySearchTree<Type> * parent);
     BinarySearchTree<Type> * removeNode(BinarySearchTree<Type> * parent);
     
-    int heightDifference(BinarySearchTree<Type> * parent);
+    int heightDifference(BinarySearchTreeNode<Type> * parent);
 
 public:
     AVLTree;
@@ -36,5 +36,62 @@ public:
     void remove(Type value);
 };
 
+template <class Type>
+int AVLTree<Type> :: heightDifference(BinarySearchTreeNode<Type> * node)
+{
+    int balance;
+    int leftHeight = this->calculateHeight(node->getLeftChild());
+    int rightHeight= this->calculateHeight(node->getRightChild());
+    balance = leftHeight - rightHeight;
+    return balance;
+}
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: leftRotation(BinarySearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getLeftChild;
+    
+    parent->setLeftChild(changedNode->getRightChild());
+    
+    changedNode->setRightChild(parent);
+    
+    return changedNode;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Tree> :: rightRotation(BinarysearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getRightChild;
+    
+    parent->setRightChild(changedNode->getLeftChild());
+    
+    changedNode->setLeftChild(parent);
+    
+    return changedNode;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Tree> :: rightLeftRotation(BinarysearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getRightChild();
+    
+    parent->setRightChild(leftRotation(changedNdoe));
+    
+    return rightRotation(parent);
+    
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Tree> :: leftRightRotation(BinarysearchTreeNode<Type> * parent)
+{
+    BinarySearchTreeNode<Type> * changedNode;
+    changedNode = parent->getLeftChild();
+    
+    parent->setLeftChild(rightRotation(changedNdoe));
+    
+    return leftRotation(parent);
+}
 
 #endif /* AVLTree_h */

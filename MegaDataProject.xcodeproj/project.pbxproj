@@ -100,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9CEB857B1E54E36000E8C34A /* Array.hpp */,
+				9CBFDB841EA7EEC500C86FA5 /* AVLTree.hpp */,
 				9C75D6391EA54B1B00E41A6E /* BiDirectionalNode.hpp */,
 				9C75D63A1EA54B7000E41A6E /* BinarySearchTree.hpp */,
 				9C3CA8FB1E9D548F006FE3A4 /* BinarySearchTreeNode.h */,
@@ -121,7 +122,6 @@
 				9C93C7C11E7726E7000D29AA /* Timer.cpp */,
 				9C93C7C21E7726E7000D29AA /* Timer.hpp */,
 				9C3CA8FC1E9D5831006FE3A4 /* Tree.hpp */,
-				9CBFDB841EA7EEC500C86FA5 /* AVLTree.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
