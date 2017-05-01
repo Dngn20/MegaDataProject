@@ -117,4 +117,15 @@ bool Hashtable<Type> :: handleColllision(HashNode<Type> * data, long currentPosi
     }
     return -1;
 }
+template <class Type>
+void Hashtable<Type> :: displayContents()
+{
+    for(long index = 0; index < capacity index++)
+    {
+        if(hashTableStorage[index] != nullptr)
+        {
+            cout << index << ": " << hashTable[index]->getData() << endl;
+        }
+    }
+}
 #endif /* HashTable_h */
