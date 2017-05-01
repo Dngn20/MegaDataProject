@@ -34,6 +34,7 @@
 		9C1464F11E89A11F00C30C62 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
 		9C1464F21E89A11F00C30C62 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
 		9C3621EC1EB7B23C00DE67E4 /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
+		9C3621ED1EB7B4E400DE67E4 /* HashNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashNode.h; sourceTree = "<group>"; };
 		9C3702081E4BA945003C6795 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		9C3702091E4BA945003C6795 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		9C37020B1E4BB213003C6795 /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = Controller/DataStructureController.cpp; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 				9C93C7C21E7726E7000D29AA /* Timer.hpp */,
 				9C3CA8FC1E9D5831006FE3A4 /* Tree.hpp */,
 				9C3621EC1EB7B23C00DE67E4 /* HashTable.hpp */,
+				9C3621ED1EB7B4E400DE67E4 /* HashNode.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
