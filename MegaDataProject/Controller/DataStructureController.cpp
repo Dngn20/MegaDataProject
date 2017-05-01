@@ -217,7 +217,7 @@ void DataStructureController :: testBinarySearchData()
     
     treeTimer.startTimer();
     
-    BinarySearchTree<CrimeData> crimeTree = fileData.readCrimeDataToBinarySearchTree("/Users/dngu9879/Documents/crimes.csv");
+    BinarySearchTree<CrimeData> crimeTree = fileData.readCrimeDataToBinarySearchTree("/Users/dngu9879/Documents/crime.csv");
     
     treeTimer.finishTimer();
     
