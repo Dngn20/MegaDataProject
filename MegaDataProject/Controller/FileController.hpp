@@ -32,7 +32,6 @@ public:
     DoubleList<FoodItem> readFoodItemDataFromFileAsList(string filename);
     void writeFoodItemDataStatistics(DoubleList<FoodItem> source, string filename);
     BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
-//    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
 
     
 };

@@ -33,8 +33,6 @@
 		9C1058F91E79C801008DDD9F /* DoubleList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DoubleList.h; path = Model/DoubleList.h; sourceTree = "<group>"; };
 		9C1464F11E89A11F00C30C62 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
 		9C1464F21E89A11F00C30C62 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
-		9C3621EC1EB7B23C00DE67E4 /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
-		9C3621ED1EB7B4E400DE67E4 /* HashNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashNode.h; sourceTree = "<group>"; };
 		9C3702081E4BA945003C6795 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		9C3702091E4BA945003C6795 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		9C37020B1E4BB213003C6795 /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = Controller/DataStructureController.cpp; sourceTree = "<group>"; };
@@ -54,11 +52,13 @@
 		9C93C7BC1E7711FD000D29AA /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FoodItem.hpp; path = Model/FoodItem.hpp; sourceTree = "<group>"; };
 		9C93C7C11E7726E7000D29AA /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
 		9C93C7C21E7726E7000D29AA /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = Model/Timer.hpp; sourceTree = "<group>"; };
+		9C9CB1A31EBA5A210098520B /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HashTable.hpp; path = Model/HashTable.hpp; sourceTree = "<group>"; };
+		9C9CB1A41EBA5A280098520B /* HashNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashNode.h; path = Model/HashNode.h; sourceTree = "<group>"; };
+		9C9CB1A51EBA5A300098520B /* AVLTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AVLTree.hpp; path = Model/AVLTree.hpp; sourceTree = "<group>"; };
 		9CA2139B1E4BB5BE002B0A32 /* DataStructrureRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructrureRunner.cpp; path = Controller/DataStructrureRunner.cpp; sourceTree = "<group>"; };
 		9CA72D091E675D03004D5AF1 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		9CA72D0A1E676319004D5AF1 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = Model/Queue.hpp; sourceTree = "<group>"; };
 		9CA72D0B1E676849004D5AF1 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
-		9CBFDB841EA7EEC500C86FA5 /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 		9CC68A3F1E5248B900AA1418 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		9CEB857B1E54E36000E8C34A /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,8 +101,10 @@
 		9C6DB5621E49134A0080296F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C9CB1A51EBA5A300098520B /* AVLTree.hpp */,
+				9C9CB1A41EBA5A280098520B /* HashNode.h */,
+				9C9CB1A31EBA5A210098520B /* HashTable.hpp */,
 				9CEB857B1E54E36000E8C34A /* Array.hpp */,
-				9CBFDB841EA7EEC500C86FA5 /* AVLTree.hpp */,
 				9C75D6391EA54B1B00E41A6E /* BiDirectionalNode.hpp */,
 				9C75D63A1EA54B7000E41A6E /* BinarySearchTree.hpp */,
 				9C3CA8FB1E9D548F006FE3A4 /* BinarySearchTreeNode.h */,
@@ -124,8 +126,6 @@
 				9C93C7C11E7726E7000D29AA /* Timer.cpp */,
 				9C93C7C21E7726E7000D29AA /* Timer.hpp */,
 				9C3CA8FC1E9D5831006FE3A4 /* Tree.hpp */,
-				9C3621EC1EB7B23C00DE67E4 /* HashTable.hpp */,
-				9C3621ED1EB7B4E400DE67E4 /* HashNode.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

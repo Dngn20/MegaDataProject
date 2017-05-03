@@ -31,7 +31,7 @@ HashNode<Type> :: HashNode()
 }
 
 template <class Type>
-Hashode<Type> :; HashNode(Type data)
+HashNode<Type> :: HashNode(Type data)
 {
     this->key = rand();
     this->data = data;
