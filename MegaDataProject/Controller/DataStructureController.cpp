@@ -33,7 +33,7 @@ void DataStructureController :: start()
     cout << "Finished testing" << endl;
 //    testFoodQueue();
 //    testIntStack();
-    testDoubleList();
+    testBinarySearchTreeOperations();
 //    testLists();
 }
 
@@ -199,14 +199,17 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
     numbers.inOrderTraversal();
     
-    
-    
     cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
     
     cout << "Balanced should be false || 0 and is: " << numbers.isBalanced() << endl;
     
+    numbers.preOrderTraversal();
+    
+    numbers.remove(43243);
+    
+    numbers.postOrderTraversal();
+    
 }
-
 void DataStructureController :: testBinarySearchData()
 
 {
