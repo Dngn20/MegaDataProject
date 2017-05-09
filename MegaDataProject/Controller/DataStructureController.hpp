@@ -22,6 +22,7 @@
 #include "../Controller/FileController.hpp"
 #include "../Model/HashTable.hpp"
 #include "../Model/BinarySearchTree.hpp"
+#include "../Model/Graph.h"
 using namespace std;
 
 class DataStructureController
@@ -37,6 +38,7 @@ private:
     void testIntStack();
     void testDoubleList();
     void testLists();
+    void testGraph();
     void testBinarySearchTreeOperations();
     void testBinarySearchData();
 

@@ -33,7 +33,8 @@ void DataStructureController :: start()
     cout << "Finished testing" << endl;
 //    testFoodQueue();
 //    testIntStack();
-    testBinarySearchTreeOperations();
+//    testBinarySearchTreeOperations();
+    
 //    testLists();
 }
 

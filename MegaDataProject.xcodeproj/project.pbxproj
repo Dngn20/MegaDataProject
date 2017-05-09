@@ -61,7 +61,7 @@
 		9CA72D0B1E676849004D5AF1 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
 		9CC68A3F1E5248B900AA1418 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		9CEB857B1E54E36000E8C34A /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
-		9CF0BF511EC234EA00CA268C /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		9CF0BF521EC2500700CA268C /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graph.h; path = Model/Graph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +102,7 @@
 		9C6DB5621E49134A0080296F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CF0BF521EC2500700CA268C /* Graph.h */,
 				9C9CB1A51EBA5A300098520B /* AVLTree.hpp */,
 				9C9CB1A41EBA5A280098520B /* HashNode.h */,
 				9C9CB1A31EBA5A210098520B /* HashTable.hpp */,
@@ -127,7 +128,6 @@
 				9C93C7C11E7726E7000D29AA /* Timer.cpp */,
 				9C93C7C21E7726E7000D29AA /* Timer.hpp */,
 				9C3CA8FC1E9D5831006FE3A4 /* Tree.hpp */,
-				9CF0BF511EC234EA00CA268C /* Graph.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
