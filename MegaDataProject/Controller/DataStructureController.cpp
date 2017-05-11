@@ -34,7 +34,7 @@ void DataStructureController :: start()
 //    testFoodQueue();
 //    testIntStack();
 //    testBinarySearchTreeOperations();
-    
+    testGraph();
 //    testLists();
 }
 
@@ -259,8 +259,15 @@ void DataStructureController :: testGraph()
     connectedWords.addVertex("Memory Stones");
     connectedWords.addVertex("Raindow Gems");
     connectedWords.addVertex("Updates from ZingBox");
+    connectedWords.addVertex("God Eater");
     
+    connectedWords.addEdge(0,1);
+    connectedWords.addEdge(0,2);
+    connectedWords.addEdge(0,3);
+    connectedWords.addEdge(0,4);
     
+    connectedWords.breadthFirstTraversal(connectedWords, 0);
+    connectedWords.depthFirstTraversal(connectedWords, 0);
     
 }
 
