@@ -247,7 +247,22 @@ void DataStructureController :: testBinarySearchData()
     
 }
 
-
+void DataStructureController :: testGraph()
+{
+    Graph<string> connectedWords;
+    
+    connectedWords.addVertex("Money");
+    connectedWords.addVertex("Gold");
+    connectedWords.addVertex("Gems from Brave Frontier");
+    connectedWords.addVertex("Hero Stones");
+    connectedWords.addVertex("Orbs");
+    connectedWords.addVertex("Memory Stones");
+    connectedWords.addVertex("Raindow Gems");
+    connectedWords.addVertex("Updates from ZingBox");
+    
+    
+    
+}
 
 
 
