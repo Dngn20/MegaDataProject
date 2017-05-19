@@ -34,7 +34,8 @@ void DataStructureController :: start()
 //    testFoodQueue();
 //    testIntStack();
 //    testBinarySearchTreeOperations();
-    testGraph();
+//    testGraph();
+    testHashTable();
 //    testLists();
 }
 
@@ -272,7 +273,24 @@ void DataStructureController :: testGraph()
 }
 
 
-
+void DataStructureController :: testHashTable()
+{
+    HashTable<string> things;
+    
+    things.add("One");
+    things.add("Two");
+    things.add("Three");
+    things.add("Four");
+    things.add("Five");
+    things.add("Six");
+    things.add("Seven");
+    things.add("Eight");
+    things.add("Nine");
+    things.add("Ten");
+    
+    things.displayContents();
+    
+}
 
 
 

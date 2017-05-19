@@ -20,7 +20,7 @@ class HashTable
 private:
     long capacity;
     long size;
-    double efficientryPercentage;
+    double efficiencyPercentage;
     HashNode<Type> * * hashTableStorage;
     bool isPrime(long sampleNumber);
     void reSize();
@@ -187,7 +187,7 @@ template <class Type>
 void HashTable<Type> :: add(Type data)
 {
     this->size++;
-    if(((this->size * 1.000) / this->capacity) > this->efficienvyPercentage)
+    if(((this->size * 1.000) / this->capacity) > this->efficiencyPercentage)
     {
         reSize();
     }

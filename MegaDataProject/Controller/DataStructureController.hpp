@@ -41,7 +41,7 @@ private:
     void testGraph();
     void testBinarySearchTreeOperations();
     void testBinarySearchData();
-
+    void testHashTable();
     
     
 public:
